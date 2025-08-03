@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Wirent Store</title>
+    <link rel="icon" href="images/logo-black.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div class="menu">
+        <a href="https://thewirent.github.io/wirentstore/">
+          <img class="logo" src="images/logo-white.png">
+        </a>
+          <button class="partnersbtn"><a href="https://thewirent.github.io/wirentstore-partners/">Our Partners
+            <img src="images/partners-white.png" class="partners-white">
+            <img src="images/partners-black.png" class="partners-black">
+            </a>
+          </button>
+              <button class="discord" id="errorBtnYT">
+                  <img class="discord-logo" src="images/discord-logo.png">
+              </button>
+              <button class="youtube" id="errorBtnDC">
+                  <img class="youtube-logo" src="images/youtube-logo.png">
+              </button>
+          <a href="https://www.twitch.tv/wirent_" target="_blank">
+            <button class="twitch" >
+                <img class="twitch-logo" src="images/twitch-logo.png">
+            </button>
+          </a>
+              <div class="error lang" id="error" key="error">
+                  <p class="error-txt" id="error-txt">Unfortunately, this URL doesn't work yet.</p>
+              </div>
+              <script>
+                  const btnyt = document.getElementById('errorBtnYT');
+                  const popupyt = document.getElementById('error');
+                
+                  btnyt.addEventListener('click', () => {
+                    popupyt.style.display = 'block';
+                    setTimeout(() => {
+                      popupyt.style.opacity = '1';
+                  }, 1);
+                
+                    setTimeout(() => {
+                      popupyt.classList.add('move');
+                    }, 500);
+                  });
+                  popupyt.addEventListener('animationend', () => {
+                  popupyt.classList.remove('move');
+                  popupyt.style.opacity = '0';
+                  popupyt.style.right = '25px';
+                  popupyt.style.display = 'none';
+                });
+                </script>
+                <script>
+                  const btndc = document.getElementById('errorBtnDC');
+                  const popupdc = document.getElementById('error');
+                
+                  btndc.addEventListener('click', () => {
+                    popupdc.style.display = 'block';
+                    setTimeout(() => {
+                      popupdc.style.opacity = '1';
+                      }, 1);
+                    setTimeout(() => {
+                      popupdc.classList.add('move');
+                    }, 500);
+                  });
+                  popupdc.addEventListener('animationend', () => {
+      popupdc.classList.remove('move');
+      popupdc.style.opacity = '0';
+      popupdc.style.right = '25px';
+      popupdc.style.display = 'none';
+    });
+                </script>
+      </div>
+    </header>
+    <h1 id="title" class="title" key="title">Welcome to Wirent Store!</h1>
+    <h2 id="subtitle" class="subtitle" key="subtitle">You can download some game items here.</h2>
+    <div class="bg"></div>
+    <div class="wirepack-mint-bg">
+          <p class="description">WirePack Mint Remastered</p>
+          <p class="version-mint">Minecraft Version 1.8.9</p>
+          <img src="images/WirePack-Mint-Remastered.png" class="resourcepack-mint">
+          <a href="files/WirePack Mint Remastered.zip" download="WirePack Mint Remastered.zip">
+            <button class="download-wpm">
+              <img src="images/download.png" format="png" class="downloadimg">
+            </button>
+          </a>
+    </div>
+    <div class="wirepack-blue-bg">
+          <p class="description">WirePack Blue</p>
+          <p class="version">Minecraft Version 1.8.9</p>
+          <img src="images/WirePack-Blue.png" class="resourcepack-blue">
+          <a href="files/WirePack Blue.zip" download="WirePack Blue.zip">
+            <button class="download-wpb">
+              <img src="images/download.png" format="png" class="downloadimg">
+            </button>
+          </a>
+    </div>
+    <div class="wirepack-basic-bg">
+            <p class="description">WirePack Basic</p>
+            <p class="version-basic">Minecraft Version 1.8.9</p>
+            <img src="images/WirePack-Basic.png" class="resourcepack-basic">
+            <a href="files/WirePack Basic.zip" download="WirePack Basic.zip">
+              <button class="download-wpbs">
+                <img src="images/download.png" format="png" class="downloadimg">
+              </button>
+            </a>
+    </div>
+    <div class="captainpack-bg">
+            <p class="description">CaptainPack</p>
+            <p class="version-captain">Minecraft Version 1.12.2</p>
+            <img src="images/CaptainPack.png" class="resourcepack-captain">
+            <a href="files/CaptainPack.zip" download="CaptainPack.zip">
+              <button class="download-cp">
+                <img src="images/download.png" format="png" class="downloadimg">
+              </button>
+            </a>
+    </div>
+</body>
+</html>
